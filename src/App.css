@@ -1,0 +1,212 @@
+.main{
+    background-color: rgb(241, 241, 241);
+    height: 90vh;
+    box-shadow: 0px 5px 25px -13px rgba(0,0,0,0.75);
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(5%);
+}
+
+
+.container-title{
+    background-color: rgb(0, 102, 185);
+    height: 90vh;
+    margin-bottom: 2%;
+    padding: 30px;
+    
+}
+
+img {
+    width: 140px;
+    height: 140px;
+    margin-left: 25%;
+}
+
+
+/*Css component title*/
+.title{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 25pt;
+    margin-top: 70%;
+}
+
+/*Css form*/
+
+.container-inputs{
+    height: 90vh;
+    padding-top: 40px;
+    padding-left: 120px;
+}
+
+.input-city{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 13pt;
+   
+}
+.input-country{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 13pt;
+    
+}
+.input-city:focus{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid rgb(0, 102, 185);
+    transition: 0.5s;
+    margin-right: 15px;
+   
+}
+.input-country:focus{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid rgb(0, 102, 185);
+    transition: 0.5s;
+    margin-right: 15px;
+    
+}
+
+button {
+    border: none;
+    padding: 4px 20px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 102, 185);
+    color: #fff;
+  }
+  
+button:hover{
+    background-color: rgb(3, 71, 128);
+    transition: 0.5s;
+}
+
+.informations-form-left{
+    height: 20vh;
+    margin-right: 3%;
+    margin-top: 10%;
+}
+.informations-form-right{
+    height: 20vh;
+    margin-top: 10%;
+}
+
+.img-weather-type{
+    width: 35px;
+    height: 35px;
+    transform: translateX(-100%);
+}
+
+.informations-city{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.informations-country{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.description-weather-type{
+    float: left;
+    float: right;
+    font-weight: bold;
+    font-size: 14pt;
+    transform: translateY(-100%);
+    margin-left: 60px;
+}
+
+.box-temperature-up{
+    transform: translateY(50%);
+    height: 4vh;
+}
+.box-temperature-down{
+    transform: translateY(50%);
+    margin-top: 5%;
+    height: 4vh;
+}
+
+.img-arrow-up{
+    width: 15px;
+    height: 15px;
+}
+.information-maximum-temperature{
+    font-weight: bold;
+    transform: translateY(-92%);
+    margin-left: 45px;
+    margin-right: 50%;
+}
+
+.img-arrow-down{
+    width: 15px;
+    height: 15px;
+}
+
+.information-minimum-temperature{
+    font-weight: bold;
+    transform: translateY(-92%);
+    margin-left: 45px;
+    
+}
+
+.box-temperature{
+    position: absolute;
+    transform: translateX(90px);
+    height: 20vh;
+}
+
+.temperature{
+    font-size: 55pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.box-bottom-left{
+    background-color: rgb(0, 102, 185);
+    border-radius: 10px;
+    height: 25vh;
+    margin-right: 60px;
+    margin-top: 20%;
+    margin-left: 20px;
+}
+.box-bottom-right{
+    background-color: rgb(0, 102, 185);
+    border-radius: 10px;
+    height: 25vh;   
+    margin-top: 20%;
+}
+
+.box-bottom-titles{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+
+hr{
+    background-color: rgb(255, 255, 255);
+}
+
+.information{
+    color: rgb(255, 255, 255);
+}
