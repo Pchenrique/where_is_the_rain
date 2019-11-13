@@ -120,6 +120,9 @@ button:hover{
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+h1.informations-city{
+    padding: 5px;
+}
 
 .informations-country{
     font-weight: bold;
@@ -175,7 +178,7 @@ button:hover{
 }
 
 .temperature{
-    font-size: 55pt;
+    font-size: 50pt;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -184,16 +187,16 @@ button:hover{
 .box-bottom-left{
     background-color: rgb(0, 102, 185);
     border-radius: 10px;
-    height: 25vh;
+    height: 33vh;
     margin-right: 60px;
-    margin-top: 20%;
+    margin-top: 17%;
     margin-left: 20px;
 }
 .box-bottom-right{
     background-color: rgb(0, 102, 185);
     border-radius: 10px;
-    height: 25vh;   
-    margin-top: 20%;
+    height: 33vh;   
+    margin-top: 17%;
 }
 
 .box-bottom-titles{

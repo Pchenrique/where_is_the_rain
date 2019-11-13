@@ -36,16 +36,22 @@ class Clima extends React.Component {
                     <div className="col-md-5 box-bottom-left">
                         <h6 className="box-bottom-titles">Detalhes</h6>
                         <hr></hr>
-                        {this.props.umidade && <p className="information">Umidade: {this.props.umidade}%</p>}
+                        {this.props.cidade && <p className="information">Cidade: {this.props.cidade}</p>}
+                        {this.props.temperatura && <p className="information">Temperatura Atual: {Math.trunc(this.props.temperatura)}ºC</p>}
+                        {this.props.temp_min && <p className="information">Temperatura Mínima: {Math.trunc(this.props.temp_min)}ºC</p>}
+                        {this.props.temp_max && <p className="information">Temperatura Máxima: {Math.trunc(this.props.temp_max)}ºC</p>}
 
                     </div>
                     <div className="col-md-5 box-bottom-right">
                         <h6 className="box-bottom-titles">Vento</h6>
                         <hr></hr>
+                        {this.props.velocidade_vento && <p className="information">Velocidade do vento: {this.props.velocidade_vento}m/s</p>}
+                        {this.props.umidade && <p className="information">Umidade: {this.props.umidade}%</p>}
+                        {this.props.descricao && <p className="information">Status: {this.props.descricao}</p>}
+               
                     </div>
                 </div>
-                {this.props.hora && <p className="information">Horario: {this.props.hora}</p>}
-                {this.props.velocidade_vento && <p className="information">Velocidade do vento: {this.props.velocidade_vento}m/s</p>}
+                
                 {this.props.error && <p>{this.props.error}</p>}
             </div>
         );
