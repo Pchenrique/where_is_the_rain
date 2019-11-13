@@ -17,6 +17,8 @@ class App extends React.Component {
     umidade: undefined,
     descricao: undefined,
     velocidade_vento: undefined,
+    pressao: undefined,
+    nublado: undefined,
     error: undefined
   }
   getClima = async (e) => {
@@ -36,6 +38,9 @@ class App extends React.Component {
         umidade: undefined,
         descricao: undefined,
         velocidade_vento: undefined,
+        pressao:undefined,
+        direcao_vento: undefined,
+        nublado: undefined,
         error: "Por favor entre com cidade e pais validos."
       });
     } else if (cidade && pais) {
@@ -50,6 +55,9 @@ class App extends React.Component {
         umidade: data.main.humidity,
         descricao: data.weather[0].description,
         velocidade_vento: data.wind.speed,
+        pressao: data.main.sea_level,
+        direcao_vento: data.wind.deg,
+        nublado: data.clouds.all,
         error: ""
       });
     } else {
@@ -63,10 +71,20 @@ class App extends React.Component {
         umidade: undefined,
         descricao: undefined,
         velocidade_vento: undefined,
+        pressao: undefined,
+        direcao_vento: undefined,
+        nublado: undefined,
         error: "Erro"
       });
     }
   }
+
+  /* hora_form = function hora() {
+     var t = new Date(this.hora);
+      var formatada = t.format("dd.mm.yyyy hh:mm:ss");
+      return formatada;
+   }
+*/
   render() {
     return (
       <div className="background-container">
@@ -89,6 +107,9 @@ class App extends React.Component {
                     umidade={this.state.umidade}
                     descricao={this.state.descricao}
                     velocidade_vento={this.state.velocidade_vento}
+                    pressao={this.state.pressao}
+                    direcao_vento={this.state.direcao_vento}
+                    nublado={this.state.nublado}
                     error={this.state.error}
                   />
                 </div>

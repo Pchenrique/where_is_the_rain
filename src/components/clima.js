@@ -11,7 +11,7 @@ class Clima extends React.Component {
                     <div className="col-md-5 informations-form-left">
                         {this.props.cidade && this.props.pais && <h1 className="informations-city"> {this.props.cidade}</h1>}
                         <h6 className="informations-country">{this.props.pais}</h6>
-                        <h6 className="informations-date">12/11/2019</h6>
+                        <h6 className="informations-date">13/11/2019</h6>
                     </div>
                     <div className="col-md-5 informations-form-right">
                         <img src={img_night} className="img-weather-type"></img>
@@ -36,18 +36,16 @@ class Clima extends React.Component {
                     <div className="col-md-5 box-bottom-left">
                         <h6 className="box-bottom-titles">Detalhes</h6>
                         <hr></hr>
-                        {this.props.cidade && <p className="information">Cidade: {this.props.cidade}</p>}
-                        {this.props.temperatura && <p className="information">Temperatura Atual: {Math.trunc(this.props.temperatura)}ºC</p>}
-                        {this.props.temp_min && <p className="information">Temperatura Mínima: {Math.trunc(this.props.temp_min)}ºC</p>}
-                        {this.props.temp_max && <p className="information">Temperatura Máxima: {Math.trunc(this.props.temp_max)}ºC</p>}
+                        {this.props.pressao && <p className="information">Pressão Atmosférica: {this.props.pressao} hPa</p>}
+                        {this.props.umidade && <p className="information">Umidade: {this.props.umidade}%</p>}
+                        {this.props.nublado && <p className="information">Nublagem: {this.props.nublado}%</p>}
 
                     </div>
                     <div className="col-md-5 box-bottom-right">
                         <h6 className="box-bottom-titles">Vento</h6>
                         <hr></hr>
                         {this.props.velocidade_vento && <p className="information">Velocidade do vento: {this.props.velocidade_vento}m/s</p>}
-                        {this.props.umidade && <p className="information">Umidade: {this.props.umidade}%</p>}
-                        {this.props.descricao && <p className="information">Status: {this.props.descricao}</p>}
+                        {this.props.direcao_vento && <p className="information">Direção Vento: {this.props.direcao_vento}º</p>}
                
                     </div>
                 </div>
