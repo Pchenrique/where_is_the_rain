@@ -1,9 +1,11 @@
 import React from "react";
-import img_night from '../img/night.svg';
 import img_arrow_up from '../img/arrow-up.svg';
 import img_arrow_down from '../img/arrow-down.svg';
 
 class Clima extends React.Component {
+    gerarImg(icon){
+      return "http://openweathermap.org/img/wn/"+icon+"@2x.png";  
+    }
     render() {
         return (
             <div>
@@ -14,16 +16,16 @@ class Clima extends React.Component {
                         <h6 className="informations-date">13/11/2019</h6>
                     </div>
                     <div className="col-md-5 informations-form-right">
-                        <img src={img_night} className="img-weather-type"></img>
+                        <img src={this.gerarImg(this.props.icon)} className="img-weather-type" />
                         {this.props.descricao && <p className="description-weather-type">{this.props.descricao}</p>}
 
                         <div className="row">
                             <div className="col-xs-4 box-temperature-up">
-                                <img src={img_arrow_down} className="img-arrow-down"></img>
+                                <img src={img_arrow_down} className="img-arrow-down" />
                                 {this.props.temp_min && <p className="information-minimum-temperature">{Math.trunc(this.props.temp_min)}º</p>}
                             </div>
                             <div className="col-xs-4 box-temperature-down">
-                                <img src={img_arrow_up} className="img-arrow-up"></img>
+                                <img src={img_arrow_up} className="img-arrow-up" />
                                 {this.props.temp_max && <p className="information-maximum-temperature">{Math.trunc(this.props.temp_max)}º</p>}
                             </div>
                             <div className="col-xs-4 box-temperature">

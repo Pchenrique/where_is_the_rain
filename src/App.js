@@ -2,13 +2,13 @@ import React from "react";
 
 import Title from "./components/Title";
 import Form from "./components/Form";
-import Clima from "./components/clima";
+import Clima from "./components/Clima";
 
 const KEY = "e1a51d8ef4b2b569a4d850bb3bd271ff";
 
 class App extends React.Component {
   state = {
-    hora: undefined,
+    icon: undefined,
     temperatura: undefined,
     temp_max: undefined,
     temp_min: undefined,
@@ -25,11 +25,13 @@ class App extends React.Component {
     e.preventDefault();
     const cidade = e.target.elements.cidade.value;
     const pais = e.target.elements.pais.value;
+
     const chamada_api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade},${pais}uk&appid=${KEY}&units=metric`);
     const data = await chamada_api.json();
-    if (data.cod === "404") {
+
+    if (data.cod == "404") {
       this.setState({
-        hora: undefined,
+        icon: undefined,
         temperatura: undefined,
         temp_max: undefined,
         temp_min: undefined,
@@ -46,7 +48,7 @@ class App extends React.Component {
     } else if (cidade && pais) {
       console.log(data);
       this.setState({
-        hora: data.dt,
+        icon: data.weather[0].icon,
         temperatura: data.main.temp,
         temp_max: data.main.temp_max,
         temp_min: data.main.temp_min,
@@ -60,31 +62,9 @@ class App extends React.Component {
         nublado: data.clouds.all,
         error: ""
       });
-    } else {
-      this.setState({
-        hora: undefined,
-        temperatura: undefined,
-        temp_max: undefined,
-        temp_min: undefined,
-        cidade: undefined,
-        pais: undefined,
-        umidade: undefined,
-        descricao: undefined,
-        velocidade_vento: undefined,
-        pressao: undefined,
-        direcao_vento: undefined,
-        nublado: undefined,
-        error: "Erro"
-      });
     }
   }
 
-  /* hora_form = function hora() {
-     var t = new Date(this.hora);
-      var formatada = t.format("dd.mm.yyyy hh:mm:ss");
-      return formatada;
-   }
-*/
   render() {
     return (
       <div className="background-container">
@@ -98,7 +78,7 @@ class App extends React.Component {
                 <div className="col-xs-8 container-inputs">
                   <Form getClima={this.getClima} />
                   <Clima
-                    hora={this.state.hora}
+                    icon={this.state.icon}
                     temperatura={this.state.temperatura}
                     temp_max={this.state.temp_max}
                     temp_min={this.state.temp_min}
@@ -121,4 +101,5 @@ class App extends React.Component {
     );
   }
 };
+
 export default App;
