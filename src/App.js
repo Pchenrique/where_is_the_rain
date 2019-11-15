@@ -2,7 +2,7 @@ import React from "react";
 
 import Title from "./components/Title";
 import Form from "./components/Form";
-import Clima from "./components/Clima";
+import Clima from "./components/clima";
 
 const KEY = "e1a51d8ef4b2b569a4d850bb3bd271ff";
 

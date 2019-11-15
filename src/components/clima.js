@@ -13,7 +13,11 @@ class Clima extends React.Component {
                     <div className="col-md-5 informations-form-left">
                         {this.props.cidade && this.props.pais && <h1 className="informations-city"> {this.props.cidade}</h1>}
                         <h6 className="informations-country">{this.props.pais}</h6>
-                        <h6 className="informations-date">13/11/2019</h6>
+                        <h6 className="informations-date">{new Date(new Date().setHours(new Date().getHours())).getHours()}:{new Date(new Date().setMinutes(new Date().getMinutes())).getMinutes()}<br></br>
+                        {new Date(new Date().setDate(new Date().getDate())).getDate()}/
+                        {new Date(new Date().setMonth(new Date().getMonth())).getMonth()}/
+                        {new Date(new Date().setFullYear(new Date().getFullYear())).getFullYear()}
+                        </h6>
                     </div>
                     <div className="col-md-5 informations-form-right">
                         <img src={this.gerarImg(this.props.icon)} className="img-weather-type" />
@@ -41,6 +45,7 @@ class Clima extends React.Component {
                         {this.props.pressao && <p className="information">Pressão Atmosférica: {this.props.pressao} hPa</p>}
                         {this.props.umidade && <p className="information">Umidade: {this.props.umidade}%</p>}
                         {this.props.nublado && <p className="information">Nublagem: {this.props.nublado}%</p>}
+                        
 
                     </div>
                     <div className="col-md-5 box-bottom-right">
