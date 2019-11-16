@@ -1,0 +1,377 @@
+/*Css layout right*/
+
+.container-inputs{
+    background: url('../img/bg3.png');
+    height: 95vh;
+}
+
+form{
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.input-city{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-size: 13pt;
+}
+
+.img-placeholder-point{
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.img-world-location{
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.input-country{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    font-size: 13pt;
+    
+}
+.input-city:focus{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(0, 102, 185);
+    transition: 0.5s;
+}
+.input-country:focus{
+    background: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(0, 102, 185);
+    transition: 0.5s;
+}
+
+button {
+    border: none;
+    padding: 5px 20px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 102, 185);
+    color: #fff;
+  }
+  
+button:hover{
+    background-color: rgb(3, 71, 128);
+    transition: 0.5s;
+}
+
+/*Css informations*/
+
+.informations{
+    display: flex;
+    justify-content: center;
+}
+
+.informations-form-left{
+    color: rgb(255, 255, 255);
+    height: 30vh;
+    margin-right: 3%;
+    margin-top: 10%;
+}
+.informations-form-right{
+    color: rgb(255, 255, 255);
+    height: 30vh;
+    margin-top: 10%;
+}
+
+.img-weather-type{
+    width: 50px;
+    height: 50px;
+    margin-left:30px;
+}
+
+.description-weather-type{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 18pt;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temp{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.informations-city{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1.informations-city{
+    padding: 3px;
+}
+
+.informations-country{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box-temperature-up{
+    height: 4vh;
+}
+
+.box-temperature-down{
+    height: 4vh;
+}
+
+.img-arrow-up{
+    width: 15px;
+    height: 15px;
+    margin-left: 45%;
+    animation: up 1s linear infinite;
+}
+
+@keyframes up {
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(15%);
+    }
+    50%{
+        transform: translateY(10%);
+    }
+    75%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.information-maximum-temperature{
+    font-weight: bold;
+    transform: translateY(-92%);
+    margin-right: 50%;
+}
+
+.img-arrow-down{
+    width: 15px;
+    height: 15px;
+    margin-left: 45%;
+    animation: down 1s linear infinite;
+}
+
+@keyframes down {
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(15%);
+    }
+    50%{
+        transform: translateY(10%);
+    }
+    75%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.information-minimum-temperature{
+    font-weight: bold;
+    transform: translateY(-92%);
+    
+}
+
+.box-temperature{
+    height: 20vh;
+}
+
+.temperature{
+    font-size: 60pt;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxes-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-bottom-left{
+    background-color: rgb(0, 102, 185);
+    border-radius: 5px;
+    height: 32vh;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+.box-bottom-right{
+    background-color: rgb(0, 102, 185);
+    border-radius: 5px;
+    height: 32vh;  
+    margin-top: 3%;
+}
+
+.box-bottom-titles{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+}
+
+hr{
+    background-color: rgb(255, 255, 255);
+}
+
+.information{
+    color: rgb(255, 255, 255);
+}
+
+.error{
+    color: red;
+    margin-left: 15%;
+}
+
+@media screen and (max-width: 600px) {
+    form{
+        margin-top: 5%;
+        margin-left: 14%;
+    }
+
+    button {
+        border: none;
+        padding: 8px 77px;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: rgb(0, 102, 185);
+        color: #fff;
+        margin-left: 15%;
+      }
+      
+    button:hover{
+        background-color: rgb(3, 71, 128);
+        transition: 0.5s;
+    }
+
+    .informations-city{
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    .informations-country{
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20%;
+    }
+
+    .informations-date{
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20%;
+    }
+
+    .informations-form-right{
+        color: rgb(255, 255, 255);
+        height: 20vh;
+        transform: translateY(-70%);
+    }
+
+    .img-weather-type{
+        width: 55px;
+        height: 55px;
+        margin-left: 12%;
+    }
+    
+    .description-weather-type{
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 22pt;
+    }
+
+    .temp{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box-temperature-up{
+        display: flex;
+        justify-content: center;
+        height: 1vh;
+    }
+    .box-temperature-down{
+        display: flex;
+        justify-content: center;
+        height: 4vh;
+    }
+    
+    .img-arrow-up{
+        width: 15px;
+        height: 15px;
+    }
+    
+    .information-maximum-temperature{
+        font-weight: bold;
+        margin-top: 5px;
+        margin-left: 2%;
+    }
+    
+    .img-arrow-down{
+        width: 15px;
+        height: 15px;
+    }
+    
+    .information-minimum-temperature{
+        font-weight: bold;    
+        margin-top: 5px;
+        margin-left: 2%;
+    }    
+
+    .boxes-bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box-bottom-left{
+        background-color: rgb(0, 102, 185);
+        border-radius: 5px;
+        height: 32vh;
+        margin-top: 32%;
+    }
+    .box-bottom-right{
+        background-color: rgb(0, 102, 185);
+        border-radius: 5px;
+        height: 32vh;  
+        margin-top: 5%;
+    }
+}
+

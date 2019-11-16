@@ -29,7 +29,7 @@ class App extends React.Component {
     const chamada_api = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade},${pais}uk&appid=${KEY}&units=metric`);
     const data = await chamada_api.json();
 
-    if (data.cod == "404") {
+    if (data.cod === "404") {
       this.setState({
         icon: undefined,
         temperatura: undefined,
@@ -40,7 +40,7 @@ class App extends React.Component {
         umidade: undefined,
         descricao: undefined,
         velocidade_vento: undefined,
-        pressao:undefined,
+        pressao: undefined,
         direcao_vento: undefined,
         nublado: undefined,
         error: "Por favor entre com cidade e pais validos."
@@ -65,41 +65,39 @@ class App extends React.Component {
     }
   }
 
+  
+
   render() {
     return (
-      <div className="background-container">
-        <div className="wrapper">
-          <div className="main">
-            <div className="container">
-              <div className="row">
-                <div className="col-xs-4 container-title">
-                  <Title/>
-                </div>
-                <div className="col-xs-8 container-inputs">
-                  <Form getClima={this.getClima} />
-                  <Clima
-                    icon={this.state.icon}
-                    temperatura={this.state.temperatura}
-                    temp_max={this.state.temp_max}
-                    temp_min={this.state.temp_min}
-                    cidade={this.state.cidade}
-                    pais={this.state.pais}
-                    umidade={this.state.umidade}
-                    descricao={this.state.descricao}
-                    velocidade_vento={this.state.velocidade_vento}
-                    pressao={this.state.pressao}
-                    direcao_vento={this.state.direcao_vento}
-                    nublado={this.state.nublado}
-                    error={this.state.error}
-                  />
-                </div>
-              </div>
-            </div>
+      <div className="container">
+        <div className="row app">
+          <div className="col-xs-12 col-sm-6 col-md-4 container-title">
+            <Title />
+          </div>
+          <div className="col-xs-12 col-sm-6 col-md-8 container-inputs">
+            <Form getClima={this.getClima} error={this.state.error}/>
+
+            <Clima
+              icon={this.state.icon}
+              temperatura={this.state.temperatura}
+              temp_max={this.state.temp_max}
+              temp_min={this.state.temp_min}
+              cidade={this.state.cidade}
+              pais={this.state.pais}
+              umidade={this.state.umidade}
+              descricao={this.state.descricao}
+              velocidade_vento={this.state.velocidade_vento}
+              pressao={this.state.pressao}
+              direcao_vento={this.state.direcao_vento}
+              nublado={this.state.nublado}
+            />
           </div>
         </div>
       </div>
     );
   }
+
+  
 };
 
 export default App;
