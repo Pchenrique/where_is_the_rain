@@ -8,6 +8,7 @@ const KEY = "e1a51d8ef4b2b569a4d850bb3bd271ff";
 
 class App extends React.Component {
   state = {
+    mostrar:false,
     icon: undefined,
     temperatura: undefined,
     temp_max: undefined,
@@ -31,6 +32,7 @@ class App extends React.Component {
 
     if (data.cod === "404") {
       this.setState({
+        mostrar: false,
         icon: undefined,
         temperatura: undefined,
         temp_max: undefined,
@@ -48,6 +50,7 @@ class App extends React.Component {
     } else if (cidade && pais) {
       console.log(data);
       this.setState({
+        mostrar: true,
         icon: data.weather[0].icon,
         temperatura: data.main.temp,
         temp_max: data.main.temp_max,
@@ -61,6 +64,24 @@ class App extends React.Component {
         direcao_vento: data.wind.deg,
         nublado: data.clouds.all,
         error: ""
+      });
+      console.log(this.state.mostrar);
+    }else{
+      this.setState({
+        mostrar: false,
+        icon: undefined,
+        temperatura: undefined,
+        temp_max: undefined,
+        temp_min: undefined,
+        cidade: undefined,
+        pais: undefined,
+        umidade: undefined,
+        descricao: undefined,
+        velocidade_vento: undefined,
+        pressao: undefined,
+        direcao_vento: undefined,
+        nublado: undefined,
+        error: "Por favor preencha os campos cidade e pais."
       });
     }
   }
@@ -77,7 +98,7 @@ class App extends React.Component {
           <div className="col-xs-12 col-sm-6 col-md-8 container-inputs">
             <Form getClima={this.getClima} error={this.state.error}/>
 
-            <Clima
+            {this.state.mostrar?<Clima
               icon={this.state.icon}
               temperatura={this.state.temperatura}
               temp_max={this.state.temp_max}
@@ -90,7 +111,7 @@ class App extends React.Component {
               pressao={this.state.pressao}
               direcao_vento={this.state.direcao_vento}
               nublado={this.state.nublado}
-            />
+            />:""}
           </div>
         </div>
       </div>
